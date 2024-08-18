@@ -3,9 +3,7 @@ import subprocess
 
 def build():
     os.system("pip install -r requirements.txt")
-    os.system("pipwin refresh")
-    os.system("pipwin install gdal")
-    os.system("pip install geoserver-rest")
+    os.system("conda install -c conda-forge geoserver-rest")
 
 def test():
     os.system("pytest")
