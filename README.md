@@ -10,7 +10,7 @@ Welcome to **Roadwise**! A powerful tool for road route planning and optimizatio
 - **Optimal Route Calculation**: Automatically generate the best road route between key points.
 - **Cost Estimation**: Get an estimated cost for the road based on the selected route.
 - **AI Integration (Upcoming)**: Future versions will include machine learning algorithms to automatically detect road and restricted points.
-- **Scalable Deployment**: Built with production-scale deployment in mind.
+
 
 ## 🛠️ Technologies Used
 
@@ -21,6 +21,7 @@ Welcome to **Roadwise**! A powerful tool for road route planning and optimizatio
   - **Dijkstra's Algorithm**: For finding the shortest path 🛤️
   - **Haversine Formula**: For distance calculation between points 📏
 
+
 ## 📸 Screenshots
 
 ![Roadwise Main Screen](path-to-your-screenshot.png)
@@ -28,6 +29,11 @@ Welcome to **Roadwise**! A powerful tool for road route planning and optimizatio
 
 ![Optimal Route](path-to-your-screenshot.png)
 *Generated optimal route between marked points.*
+
+## Demo Link
+https://luxury-torte-bfcada.netlify.app/
+To use the this link you still have to clone repository and run the backend.
+
 
 ## 🔧 Installation & Setup
 
