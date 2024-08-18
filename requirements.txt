@@ -1,0 +1,7 @@
+Flask
+requests
+Flask-Cors
+pipwin
+refresh
+gdal
+geoserver-rest
