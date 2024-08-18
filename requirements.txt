@@ -3,5 +3,3 @@ requests
 Flask-Cors
 pipwin
 
-gdal
-geoserver-rest
