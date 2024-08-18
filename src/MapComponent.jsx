@@ -25,6 +25,7 @@ const  MapComponent = () => {
   const [pointalt, setPointalt] = useState([]);
   const [pathtoprint, setPathtoprint] = useState([]);
   const [distance,setDistance] = useState([]);
+  const [zoomarray, setZoomarray] = useState([]);
   // Call useGeographic() to configure OpenLayers for [longitude, latitude] coordinates
 
   function findLeastCostPath2(map, clickedCoordinates, roadCoordinates, finalCoordinate,curr_i,curr_j,target_i,target_j) {
@@ -429,10 +430,15 @@ function findClosestPoint(points, coordinate) {
 }
 
   useEffect(() => {
-    let topLeft=[13.72295, 79.57303]; // Top left corner
-      let topRight=[13.72287, 79.60753]; // Top right corner
-      let bottomRight=[13.70278, 79.60753]; // Bottom right corner
-      let bottomLeft=[13.70287, 79.597294]
+    const activeMap = JSON.parse(localStorage.getItem('activeMap'));
+    console.log("activeMap",activeMap);
+    const mapData = JSON.parse(localStorage.getItem(activeMap));
+    console.log("mapData",mapData);
+    let topLeft=[mapData.corners.lat1, mapData.corners.lon1]; // Top left corner
+      let topRight=[mapData.corners.lat2, mapData.corners.lon2]; // Top right corner
+      let bottomRight=[mapData.corners.lat3, mapData.corners.lon3]; // Bottom right corner
+      let bottomLeft=[mapData.corners.lat4, mapData.corners.lon4]
+      setZoomarray([topLeft[0],topLeft[1]]);
       const distance = 0.000089748;
       const pointsInRegion = generatePoints(topLeft, topRight, bottomRight, bottomLeft);
       console.log("hell",pointsInRegion);
@@ -456,8 +462,8 @@ function findClosestPoint(points, coordinate) {
       }),
       new TileLayer({
         source: new TileWMS({
-          url: 'http://localhost:8080/geoserver/WS_test/wms',
-          params: { 'LAYERS': 'IITTP1', 'TILED': false },
+          url: 'http://localhost:8080/geoserver/new_workspace9/wms',
+          params: { 'LAYERS': JSON.parse(localStorage.getItem("activeMap")), 'TILED': false },
           serverType: 'geoserver',
           transition: 0
         })
@@ -468,7 +474,7 @@ function findClosestPoint(points, coordinate) {
       layers: layers,
       target: 'map',
       view: new View({
-        center: ([   79.60753,13.70278]), 
+        center: ([   zoomarray[1],zoomarray[0]]), 
         zoom: 14
       })
     });
@@ -477,7 +483,7 @@ function findClosestPoint(points, coordinate) {
       source: new VectorSource({
         features: [
           new Feature({
-            geometry: new Point([  79.57303,13.72295])
+            geometry: new Point([  zoomarray[1],zoomarray[0]])
           })
         ]
       }),
@@ -485,7 +491,7 @@ function findClosestPoint(points, coordinate) {
       style: new Style({
         image: new CircleStyle({
           radius: 5,
-          fill: new Fill({ color: 'red' }),
+          fill: new Fill({ color: 'white' }),
           stroke: new Stroke({ color: 'black', width: 1 })
         })
       })
@@ -555,7 +561,7 @@ function findClosestPoint(points, coordinate) {
         style: new Style({
           image: new CircleStyle({
             radius: 5,
-            fill: new Fill({ color: 'red' }),
+            fill: new Fill({ color: 'blue' }),
             stroke: new Stroke({ color: 'black', width: 1 })
           })
         })
