@@ -31,7 +31,7 @@ Welcome to **Roadwise**! A powerful tool for road route planning and optimizatio
 *Generated optimal route between marked points.*
 
 ## Demo Link
-https://luxury-torte-bfcada.netlify.app/
+[https://imaginative-llama-56d6a1.netlify.app/](https://imaginative-llama-56d6a1.netlify.app/)
 To use the this link you still have to clone repository and run the backend.
 
 
