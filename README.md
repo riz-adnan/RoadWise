@@ -101,11 +101,7 @@ Contributions are welcome! Please fork the repository and submit a pull request.
 
 Distributed under the MIT License.
 
-## 📧 Contact
 
-Your Name - [Adnan Rizvi](mailto:rizviadnan72@gmail.com)
-
-Project Link: [https://github.com/your-username/roadwise](https://github.com/your-username/roadwise)
 
 ---
 
