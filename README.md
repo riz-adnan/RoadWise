@@ -22,13 +22,14 @@ Welcome to **Roadwise**! A powerful tool for road route planning and optimizatio
   - **Haversine Formula**: For distance calculation between points 📏
 
 
-## 📸 Screenshots
+## 📸 Video
 
-![Roadwise Main Screen](path-to-your-screenshot.png)
-*Main interface where users can upload maps and mark points.*
+[![Watch the video](https://img.youtube.com/vi/VyvUpMrRNwg/0.jpg)](https://www.youtube.com/watch?v=VyvUpMrRNwg)
 
-![Optimal Route](path-to-your-screenshot.png)
-*Generated optimal route between marked points.*
+## Reports
+
+Report - https://drive.google.com/file/d/1UoTy40iOsBh2_1OQhTMlZhNHkkX2UBV2/view?usp=sharing
+Presentation - https://docs.google.com/presentation/d/1RKJL6TuJo0t_PGusnXo_NRzyydhy7HKm/edit?usp=drive_link&ouid=109693586806775075371&rtpof=true&sd=true
 
 ## Demo Link
 [https://imaginative-llama-56d6a1.netlify.app/](https://imaginative-llama-56d6a1.netlify.app/)
